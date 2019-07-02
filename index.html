@@ -5,68 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
   <title>Job Application</title>
 </head>
 <body>
-
   <!-- Navigation Panel -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Job Application</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Job Application</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-
-  <form>
-    <div class="form-group row">
-        <label for="name" class="col-sm-2 col-form-label">Name: </label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter Name">
-          <small id="nameHelp" class="form-text text-muted">Please enter your name without any special characters.</small>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form>
         </div>
-    </div>
-    <div class="form-group row">
-      <label for="nationality" class="col-sm-2 col-form-label">Nationality</label>
-      <select class="form-control col-sm-10" id="nationality">
-        <option value="Afghanistan">Afghanistan</option>
-        <option value="Albania">Albania</option>
-        <option value="Algeria">Algeria</option>
-        <option value="American Samoa">American Samoa</option>
-        <option value="Andorra">Andorra</option>
-        <option value="Angola">Angola</option>
-      </select>
-    </div>
+      </nav>
+    <div id="application">
+      
+      <form>
+        <div class="form-group row">
+          <label for="name" class="col-sm-1 form-control-sm col-form-label">Name: </label>
+          <input type="text" class="form-control form-control-sm col-sm-5" id="name" aria-describedby="name" placeholder="Enter Name">
+          
+          <label for="birthday" class="col-sm-1 form-control-sm col-form-label">Date of Birth</label>
+          <input type="date" class="form-control col-sm-2 form-control-sm">
+          
+          <label for="mobile" class="col-sm-1 form-control-sm col-form-label">Mobile</label>
+          <input type="text" class="form-control form-control-sm col-sm-2" placeholder="(123) 456 7890">
+        </div>
+        <div class="form-group row">
+          <label for="email" class="col-sm-1 form-control-sm col-form-label">Email</label>
+          <input type="email" class="form-control form-control-sm col-sm-2" placeholder="name@domain.com">
+          
+          <label for="insta" class="col-sm-1 form-control-sm">Instagram</label>
+          <input type="text" class="form-control form-control-sm col-sm-2" placeholder="instagram">
+          
+          <label for="nationality" class="col-sm-1 form-control-sm col-form-label" id="nationality">Nationality</label>
+          <select class="custom-select custom-select-sm col-sm-2" id="nationality">
+            <option value="Afghanistan" selected>Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+          </select>
+          
+          <label for="visa" class="col-sm-1 form-control-sm">Visa Status</label>
+          <select class="form-control form-control-sm col-sm-2">
+            <option value="Visa">Visa</option>
+            <option value="Residents">Residents</option>
+          </select>
+        </div>
 
-  </form>  
+        <div class="form-group row">
+          <div class="col-sm-6" id="textArea">
+            <label class="col-sm-2 form-control-sm">About You</label>
+            <textarea name="aboutyou" class="form-control form-control-sm col-sm-10" rows="7" placeholder="enter something about you within 300 words"></textarea>
+          </div>
+          <div class="col-sm-6" id="textOther">
+            <label for="height" class="col-sm-3 form-control-sm col-form-label">Height(cm)</label>
+            <input type="number" class="form-control form-control-sm col-sm-3" placeholder="in cm">
+            <label for="weight" class="col-sm-3 form-control-sm col-form-label">Weight(lbs)</label>
+            <input type="number" class="form-control form-control-sm col-sm-3" placeholder="in lb">
 
+            <label for="" class="col-sm-3 form-control-sm col-form-label">Relationship</label>
+            <select class="form-control form-control-sm col-sm-3">
+              <option value="Single">Single</option>
+              <option value="Married">Married</option>
+              <option value="Divorced">Divorced</option>
+              <option value="Never Married">Never Married</option>
+            </select>
+            
+            <label for="" class="col-sm-3 form-control-sm col-form-label">Children</label>
+            <select class="form-control form-control-sm col-sm-3">
+              <option value="already have">Already Have</option>
+              <option value="not yet">Not Yet</option>
+            </select>
+        
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label form-control-sm" for="customCheck1">Are you ready to make relationship</label>
+              </div>
+          </div>
+        </div>
+
+        <div class="form-group row" id="languages">
+          <label class="col-sm-2 form-control-sm">Languages</label>
+          <div class="custom-control custom-checkbox col-sm-1">
+            <input type="checkbox" class="custom-control-input form-control-sm" id="customCheck1">
+            <label class="custom-control-label form-control-sm" for="customCheck1">English</label>
+          </div>
+
+          <div class="custom-control custom-checkbox col-sm-1">
+            <input type="checkbox" class="custom-control-input" id="customCheck2">
+            <label class="custom-control-label form-control-sm" for="customCheck2">Spanish</label>
+          </div>
+          
+          <div class="custom-control custom-checkbox col-sm-1">
+            <input type="checkbox" class="custom-control-input" id="customCheck3">
+            <label class="custom-control-label form-control-sm" for="customCheck3">French</label>
+          </div>
+          
+          <div class="custom-control custom-checkbox col-sm-1">
+            <input type="checkbox" class="custom-control-input" id="customCheck4">
+            <label class="custom-control-label form-control-sm" for="customCheck4">Mandarin</label>
+          </div>
+          
+          <div class="custom-control custom-checkbox col-sm-1">
+            <input type="checkbox" class="custom-control-input" id="customCheck5">
+            <label class="custom-control-label form-control-sm" for="customCheck5">Japanese</label>
+          </div>
+          
+          <div class="custom-control custom-checkbox col-sm-1">
+            <input type="checkbox" class="custom-control-input" id="customCheck6">
+            <label class="custom-control-label form-control-sm" for="customCheck6">Portugese</label>
+          </div>
+          
+          <div class="custom-control custom-checkbox col-sm-1">
+            <input type="checkbox" class="custom-control-input" id="customCheck7">
+            <label class="custom-control-label form-control-sm" for="customCheck7">Korean</label>
+          </div>
+          
+          <div class="custom-control custom-checkbox col-sm-1">
+            <input type="checkbox" class="custom-control-input " id="customCheck8">
+            <label class="custom-control-label form-control-sm" for="customCheck8">Bangla</label>
+          </div>
+
+          <div class="custom-control custom-checkbox col-sm-1">
+            <input type="checkbox" class="custom-control-input" id="customCheck9">
+            <label class="custom-control-label form-control-sm" for="customCheck9">Hindi</label>
+          </div>
+          <div class="custom-control custom-checkbox col-sm-1">
+            <input type="checkbox" class="custom-control-input" id="customCheck10">
+            <label class="custom-control-label form-control-sm" for="customCheck10">Urdu</label>
+          </div>
+        </div>
+        <div class="form-group row" id="imageUpload">
+          <div class="custom-file col-sm-3">
+            <input type="file" class="custom-file-input" id="customFile">
+            <label class="custom-file-label form-control-sm" for="customFile">Only *.jpg, *.png, *.gif</label>
+          </div>
+          <div class="custom-file col-sm-3">
+            <input type="file" class="custom-file-input" id="customFile">
+            <label class="custom-file-label form-control-sm" for="customFile">Only *.jpg, *.png, *.gif</label>
+          </div>
+          <div class="custom-file col-sm-3">
+            <input type="file" class="custom-file-input" id="customFile">
+            <label class="custom-file-label form-control-sm" for="customFile">Only *.jpg, *.png, *.gif</label>
+          </div>
+        </div>
+    
+        <div class="form-group row" >
+          <div class="col-md-12" id="submitSection">
+            <button type="submit" class="btn btn-primary btn-sm col-md-2 right" id="submitButton">Submit</button>
+            <button type="reset" class="btn btn-danger btn-sm col-md-2" id="resetButton">Reset</button>
+        </div>
+    </form>  
+  </div>
 </body>
 </html>
